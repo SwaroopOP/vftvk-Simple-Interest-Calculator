@@ -1,10 +1,8 @@
-body {background-color:black;font-family: arial;color: white} 
-<h1> {color:grey;font-family: verdana} </h1>
+body {background-color:black;font-family: arial;color: white;} 
+h1 {color:grey;font-family: verdana;} </h1>
 
-<div class="maindiv"> 
-{background-color:white;color:black;width:300px; padding:20px;border-radius:25px;
-margin: center;}
-</div>
+.maindiv{background-color:white;color:black;width:300px; padding:20px;border-radius:25px;
+margin: auto;}
 
-
+mark {background-color:yellow;color:black;}
 
