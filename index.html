@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Simple Intrest Calculator</title>
+          <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class='maindiv'>
-                <h1>Simple Interest Calculator</h1>
-        
-        Amount <input type="number"  id="principal" onfocus="this.value=this.value"> <br/>
-        Interest Rate <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="ratechange()"><span id="rate-displayer">10.25%</span>  <br/>
-        No. of Years <input type="number" min="1" max="10" id="years"> <br/>
-        <button onclick="Compute()">Compute Interest</button> <br><br/> <span id="result"> </span> <br><br/> 
-        <footer>©Everyone Can Get Rich</footer>
+        <div class="maindiv">
+                <h1>Simple Interest Calculator</h1>    
+        Amount <input type="number"  id="principal">  <br/>
+        <range>
+        Interest Rate <input type="range" min="1" max="20" step="0.25" value="10.25" id="rate" onchange="updateSlider(this.value)"> <span id="sliderAmount" ></span> <br/> 
+        </range> 
+        <label> No. of Years:  </label>
+            <select name="years" id="years">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>                
+                <option value=5>5</option>               
+                <option value=6>6</option>                
+                <option value=7>7</option>                
+                <option value=8>8</option>                
+                <option value=9>9</option>                
+                <option value=10>10</option>              
+            </select><br/> 
+        <button onclick="compute()">Compute Interest</button> <br><br/> <span id="result">  </span> <br><br/>
+        <footer>© Everyone Can Get Rich</footer>
+        </div>
     </body>
 </html>

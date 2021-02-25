@@ -1,23 +1,25 @@
+//Compute Interest
 function compute()
-{   
-    principal = document.getElementById("principal").value;
-            rate = document.getElementById("rate").value;
-            years = document.getElementById("years").value;
-    interest = principal * years *(rate/100);
-            years_in_future= newDate().getFullYear() + parseInt(years);
+{
+     principal = document.getElementById("principal").value;
+	 rate = document.getElementById("rate").value;
+	 years = document.getElementById("years").value;
+     interest = principal*years*(rate/100);
+	 years_in_future = new Date().getFullYear() + parseInt(years); //years in the future
+	 
+	 //validation for Principal input box
+	 if (principal < 1) {
+		 window.alert("Enter a positive number");
+		 document.getElementById("principal").focus();
+	 }
+	 else{
+		result.innerHTML = "If you deposit " + "<mark>" + principal + "</mark>" + "," + "</br>" + "at an interest rate of " + "<mark>" + rate + "%.</mark>" +  "</br>" + " You will recive an amount of " + "<mark>" +interest.toFixed(2) + "</mark>" +  "," + "</br>" + " in the year " + "<mark>" + years_in_future + "</mark>" ;
+	 }
 
-//validation for Principal input box
-            if(principal<=0){
-                window.alert("enter a positive number greater than zero");
-                document.getElementById("prinicipal").focus();
-            }
-            else{
-                result.innerHTML = "If you deposit"+"<mark>"+"principal"+"</mark>"+"," +"</br>"+"at an interest rate of"+"<mark>"+"rate"+"%"+"</mark>"+"."+"</br>"+"You will receive an amount of"+"<mark>"+"years"+"</mark>"+","+"</br>"+"in the year"+"<mark>"+"years_in_future"+"</mark>"
-            }  
 }
 //updating slider
-function updateSlider(sliderAmount)
+function updateSlider(sliderAmount)       
 {
-    var sliderSpan= document.getElementById("sliderAmount")
-    sliderSpan.innerHTML =sliderAmount +"%";
+	var sliderSpan = document.getElementById("sliderAmount");
+	sliderSpan.innerHTML = sliderAmount + "%";
 }
